@@ -1,9 +1,9 @@
 const video = document.getElementById("video");
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUrl("models"),
-  faceapi.nets.faceLandmark68Net.loadFromUrl("models"),
-  faceapi.nets.faceExpressionNet.loadFromUrl("models"),
+  faceapi.nets.tinyFaceDetector.loadFromUri("models"),
+  faceapi.nets.faceLandmark68Net.loadFromUri("models"),
+  faceapi.nets.faceExpressionNet.loadFromUri("models"),
 ]).then(startStreaming);
 
 function startStreaming() {
