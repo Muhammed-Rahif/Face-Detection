@@ -28,7 +28,7 @@ function startStreaming() {
 video.addEventListener("play", () => {
   const canvas = faceapi.createCanvasFromMedia(video);
   document.body.append(canvas);
-  const dim = { width: video.videoWidth, height: video.videoHeight };
+  const dim = { width: video.width, height: video.height };
   console.log({ dim });
   faceapi.matchDimensions(canvas, dim);
   setInterval(async () => {
