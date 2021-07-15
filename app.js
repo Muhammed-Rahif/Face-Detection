@@ -43,5 +43,13 @@ video.addEventListener("play", () => {
     faceapi.draw.drawDetections(canvas, resizedDetections);
     faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
-  }, 50);
+  }, 100);
 });
+
+window.onorientationchange = (e) => {
+  if (e.target.screen.orientation.angle !== 0) {
+    alert(
+      "This website will not work properly in landscape mode. So you would better to stay in portrait mode! :-)"
+    );
+  }
+};
